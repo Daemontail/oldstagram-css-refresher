@@ -42,7 +42,7 @@ window.addEventListener("load",function(){
                 <p class="location profile-details" >${posts[i].location}</p>
                 </div>
             </div>
-            <img class="post-image" src=${posts[i].post}>
+            <img class="post-image" id=post-${i} src=${posts[i].post}>
             <div class="interactibles">
             <button class="btn-icon">                
             <img class="icon" id="like-${i}" src="images/icon-heart.png">
@@ -60,4 +60,16 @@ window.addEventListener("load",function(){
         `
     }
     main.innerHTML+=content
+    for(let i=0;i<posts.length;i++){
+        document.getElementById(`post-${i}`).addEventListener("dblclick",function(){
+            let likes=JSON.parse(document.getElementById(`like-counter-${i}`).textContent)
+            likes++
+            document.getElementById(`like-counter-${i}`).textContent=JSON.stringify(likes)
+        })
+        document.getElementById(`like-${i}`).addEventListener("click",function(){
+            let likes=JSON.parse(document.getElementById(`like-counter-${i}`).textContent)
+            likes++
+            document.getElementById(`like-counter-${i}`).textContent=JSON.stringify(likes)
+        })
+    }
 })
