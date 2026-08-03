@@ -28,7 +28,7 @@ const posts = [
     }
 ]
 
-let container=document.getElementById("container")
+const main=document.getElementById("main")
 
 window.addEventListener("load",function(){
     let content=""
@@ -44,14 +44,20 @@ window.addEventListener("load",function(){
             </div>
             <img class="post-image" src=${posts[i].post}>
             <div class="interactibles">
-            <img class="icon" src="images/icon-heart.png">
+            <button class="btn-icon">                
+            <img class="icon" id="like-${i}" src="images/icon-heart.png">
+            </button>
+            <button class="btn-icon">
             <img class="icon" src="images/icon-comment.png">
+            </button>
+            <button class="btn-icon">
             <img class="icon" src="images/icon-dm.png">
-            <p class="bold">${posts[i].likes} likes</p>
+            </button>
+            <p class="bold"> <span id="like-counter-${i}">${posts[i].likes}</span> likes</p>
             <p><span class="bold username">${posts[i].username}</span>${posts[i].comment}</p>
             </div>
         </section>
         `
     }
-    container.innerHTML+=content
+    main.innerHTML+=content
 })

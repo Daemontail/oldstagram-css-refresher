@@ -52,10 +52,20 @@ html, body {
     width:100%;
 }
 /*Likes and comments*/
+.btn-icon{
+    background-color: #fff;
+    padding:0;
+    border:none;
+    margin:20px 12px 0 0;
+}
 .icon{
     width:24px;
     height:25px;
-    margin:20px 12px 0 0;
+}
+.btn-icon:hover,
+.btn-icon:focus
+{
+    opacity: 50%;
 }
 .interactibles{
     margin-left: 8px;
