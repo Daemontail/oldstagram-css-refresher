@@ -9,7 +9,6 @@ html, body {
 .container{
     width: 375px;
     margin: 0 auto;
-    background-color: white;
 }
 /*Header section*/
 .header{
@@ -18,6 +17,7 @@ html, body {
     align-items: center;
     border-bottom: 1px solid #C6C6C6;
     padding:8px 12px;
+    background-color: white;
 }
 
 .logo{
@@ -39,6 +39,10 @@ html, body {
 .location{
     font-size:0.75rem;
 }
+.post{
+    margin-bottom: 20px;
+    background-color: white;
+}
 .post-info{
     display: flex;
     padding:10px;
@@ -56,4 +60,7 @@ html, body {
 .interactibles{
     margin-left: 8px;
     padding-bottom: 8px;
+}
+.username{
+    margin-right: 4px;
 }

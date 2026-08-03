@@ -28,3 +28,30 @@ const posts = [
     }
 ]
 
+let container=document.getElementById("container")
+
+window.addEventListener("load",function(){
+    let content=""
+    for(let i=0;i<posts.length;i++){
+        content+=`
+        <section class="post">
+            <div class="post-info">
+                <img class="profile-icon" src=${posts[i].avatar}>
+                <div>
+                <p class="bold profile-details">${posts[i].name}</p>
+                <p class="location profile-details" >${posts[i].location}</p>
+                </div>
+            </div>
+            <img class="post-image" src=${posts[i].post}>
+            <div class="interactibles">
+            <img class="icon" src="images/icon-heart.png">
+            <img class="icon" src="images/icon-comment.png">
+            <img class="icon" src="images/icon-dm.png">
+            <p class="bold">${posts[i].likes} likes</p>
+            <p><span class="bold username">${posts[i].username}</span>${posts[i].comment}</p>
+            </div>
+        </section>
+        `
+    }
+    container.innerHTML+=content
+})
