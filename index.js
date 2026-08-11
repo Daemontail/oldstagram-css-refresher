@@ -60,6 +60,7 @@ window.addEventListener("load",function(){
         `
     }
     main.innerHTML+=content
+
     for(let i=0;i<posts.length;i++){
         document.getElementById(`post-${i}`).addEventListener("dblclick",function(){
             let likes=JSON.parse(document.getElementById(`like-counter-${i}`).textContent)
